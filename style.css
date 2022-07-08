@@ -273,7 +273,7 @@ nav ul li a:hover {
 
 /*section 1 - tentang kami*/
 .section_1_sub_1_wrap {
-    background-color: #F2F5F8;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,7 +282,6 @@ nav ul li a:hover {
 
 .section_1_sub_1 {
     padding: 50px 200px 50px 200px;
-    background-color: #F2F5F8;
     color: white;
     max-width: 1400px;
 }
