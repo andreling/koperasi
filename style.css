@@ -895,7 +895,7 @@ nav ul li a:hover {
 
 .section_6_sub div {
     display: flex;
-    width: 50%;
+    width: 100%;
     align-items: flex-start;
     flex-direction: column;
     margin-right: 200px;
