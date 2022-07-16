@@ -1545,6 +1545,9 @@ footer div {
     }
     
     /*pendaftaran*/
+    .section_daftar{
+         background-attachment: scroll;
+    }
     .section_daftar_sub div {
         width: 100%;
         align-items: center;
