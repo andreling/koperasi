@@ -508,6 +508,7 @@ nav ul li a:hover {
 .section_3 {
     display: flex;
     padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #F9FAFC;
     width: 100%;
     align-items: center;
@@ -543,6 +544,77 @@ nav ul li a:hover {
 .table_2 {
     width: 100%;
     margin-bottom: 100px;
+}
+
+/*Pendaftaran*/
+.section_daftar {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    background-image: url(asset/section_bg/6.webp);
+    background-color: #1E1E1E;
+
+    padding-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.section_daftar_sub {
+    display: flex;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_daftar_sub div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.section_daftar_sub div h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.section_daftar_sub div p {
+    color: white;
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.section_daftar_sub div a {
+    text-align: center;
+    background-color: #51A4F2;
+    color: white;
+    padding: 15px 25px;
+    font-weight: 600;
+    width: 150px;
+    transition: 300ms ease-in-out;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.section_daftar_sub div a:hover {
+    background-color: #014796;
+}
+
+.section_daftar_sub img {
+    width: 300px;
 }
 
 /*testimonial*/
@@ -1390,6 +1462,26 @@ footer div {
     }
 
     .section_6_sub div p {
+        text-align: center;
+        font-size: 14px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    /*pendaftaran*/
+    .section_daftar_sub div {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    .section_daftar_sub div h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section_daftar_sub div p {
         text-align: center;
         font-size: 14px;
         margin-left: 25px;
