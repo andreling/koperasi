@@ -1468,25 +1468,6 @@ footer div {
         margin-right: 25px;
     }
     
-    /*pendaftaran*/
-    .section_daftar_sub div {
-        width: 100%;
-        align-items: center;
-        flex-direction: column;
-        margin-right: 0px;
-    }
-
-    .section_daftar_sub div h2 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .section_daftar_sub div p {
-        text-align: center;
-        font-size: 14px;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
 
     /*informasi*/
     .section_7 {
