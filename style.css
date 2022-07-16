@@ -1112,6 +1112,10 @@ footer div {
     .paralex {
         background-attachment: scroll;
     }
+    
+    .section_daftar .paralex {
+        background-attachment: scroll;
+    }
 
     .text_white {
         font-size: 14px;
