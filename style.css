@@ -72,6 +72,21 @@ body {
     font-weight: 600;
 }
 
+/*no select*/
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}
+
 /*================================================*/
 
 
@@ -85,16 +100,17 @@ body {
 }
 
 .logo_div img {
-    width: 250px;
+    width: 225px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 2%;
+    padding: 0px 1%;
     transition: all 300ms ease-in-out;
     width: 100%;
     z-index: 1000;
+    border-bottom: rgb(218, 218, 218) 1px solid;
     position: fixed;
     background-color: white;
     height: 90px;
@@ -103,9 +119,12 @@ nav {
 }
 
 nav ul li {
-    padding: 0px 20px;
+    padding: 35px 20px;
 }
 
+nav ul li a {
+    padding: 35px 0px;
+}
 
 nav ul {
     z-index: 999;
@@ -115,32 +134,39 @@ nav ul {
     list-style: none;
 }
 
-nav ul li a {
+nav ul li a:not(.special-link) {
     transition: all 0.3s ease 0s;
     font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 13px;
-    color: #014796;
+    font-size: 15px;
+    color: #221e1e;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.special-link {
+    background-color: #135CFD;
+    padding: 10px 30px;
     color: white;
-    background-color: #51A4F2;
-    padding: 13px;
-    border-radius: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
 
+.special-link:hover {
+    background-color: #053292;
+    transition: ease-in-out 300ms;
+}
+
+nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
+    color: #135CFD;
 }
 
 .scroll-down nav {
-
     transform: translate3d(0, -100%, 0);
-
 }
 
 .toggle-button {
     display: none;
-
     flex-direction: column;
     justify-content: space-between;
     height: 20px;
@@ -508,7 +534,7 @@ nav ul li a:hover {
 .section_3 {
     display: flex;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     background-color: #F9FAFC;
     width: 100%;
     align-items: center;
@@ -520,7 +546,7 @@ nav ul li a:hover {
     text-align: left;
     max-width: 1400px;
     padding: 0 100px 20px 100px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .section_3_sub h2 {
@@ -538,87 +564,71 @@ nav ul li a:hover {
 
 .table_1 {
     width: 100%;
-    margin-bottom: 20px;
-}
-
-.table_2 {
-    width: 100%;
     margin-bottom: 100px;
 }
 
-/*Pendaftaran*/
-.section_daftar {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    align-items: center;
-    background-image: url(asset/section_bg/6.webp);
-    background-color: #1E1E1E;
-
-    padding-top: 150px;
-    padding-bottom: 150px;
-    position: relative;
-}
-
-.section_daftar_sub {
+.program_container {
     display: flex;
     max-width: 1400px;
-    align-items: center;
-    justify-content: center;
+    padding: 0 200px 50px 200px;
+    height: 100%;
 }
 
-.section_daftar_sub div {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-
-
-}
-
-.section_daftar_sub div h2 {
-    color: white;
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-}
-
-.section_daftar_sub div p {
-    color: white;
-    margin-bottom: 60px;
-    font-size: 18px;
-    font-weight: 500px;
-    letter-spacing: 1px;
+.section_3 p {
     line-height: 30px;
+    font-size: 25px;
+    color: #333333;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
 }
 
-.section_daftar_sub div a {
+.sub_program_container {
     text-align: center;
-    background-color: #51A4F2;
-    color: white;
-    padding: 15px 25px;
-    font-weight: 600;
-    width: 150px;
-    transition: 300ms ease-in-out;
-    letter-spacing: 2px;
-    text-decoration: none;
+    width: 50%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spc_1 {
+    margin-right: 20px;
+}
+
+.spc_2 {
+    margin-left: 20px;
+}
+
+.product_mask {
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+.product_mask:hover {
+    opacity: 0.8;
+}
+
+.sub_program_container img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
     border-radius: 15px;
 }
 
-.section_daftar_sub div a:hover {
-    background-color: #014796;
+.sub_program_container h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
 }
-
-.section_daftar_sub img {
-    width: 300px;
-}
-
-
-
 
 /*testimonial*/
 
@@ -1107,6 +1117,76 @@ footer div {
     text-align: center;
 }
 
+@media (max-width: 1110px) {
+
+    /*nav*/
+    .toggle-button {
+        display: flex;
+    }
+
+    .scroll-down nav {
+        transform: none;
+    }
+
+    .scroll-up nav {
+        filter: none;
+    }
+
+    nav ul {
+        overflow: scroll;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        height: 100%;
+        width: 300px;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.8s cubic-bezier(0.47, 0.53, 0.05, 0.96) 0s;
+
+    }
+
+    nav ul li {
+        padding: 15px 20px;
+        list-style: none;
+    }
+
+    nav ul li a {
+        padding: 15px 0px;
+
+    }
+
+
+    .special-links {
+        margin-top: 30px;
+    }
+
+    .special-link {
+        margin-top: 30px;
+        padding: 13px 105px;
+    }
+
+
+
+    nav ul.active {
+        right: 0%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mask.active {
+        opacity: 0.6;
+        visibility: visible;
+    }
+
+    .btn {
+        visibility: visible;
+    }
+}
+
 @media (max-width: 920px) {
 
     .paralex {
@@ -1132,60 +1212,6 @@ footer div {
         margin-right: 20px;
         line-height: 60px;
         letter-spacing: 3px;
-    }
-
-    /*nav*/
-    .toggle-button {
-        display: flex;
-    }
-
-    .scroll-down nav {
-        transform: none;
-    }
-
-    .scroll-up nav {
-        filter: none;
-    }
-
-    nav ul {
-        overflow: scroll;
-        position: fixed;
-        flex-direction: column;
-        right: -80%;
-        height: 100%;
-        width: 300px;
-        visibility: hidden;
-        opacity: 0;
-        top: 0px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: rgb(255, 255, 255);
-        transition: 0.5s;
-    }
-
-    nav ul li {
-        padding: 0px 20px;
-        margin: 10px 0px;
-        list-style: none;
-    }
-
-    nav ul li a {
-        color: #014796;
-    }
-
-    nav ul.active {
-        right: 0%;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .mask.active {
-        opacity: 0.6;
-        visibility: visible;
-    }
-
-    .btn {
-        visibility: visible;
     }
 
     /*intro*/
@@ -1380,89 +1406,46 @@ footer div {
         font-size: 25px;
         text-align: center;
         line-height: 40px;
-
         margin-bottom: 20px;
         letter-spacing: 3px;
         font-weight: 600;
     }
 
-
+    .table_1 {
+        margin-bottom: 50px;
+    }
 
     .section_3 {
         padding-top: 50px;
+        padding-bottom: 100px;
     }
 
-    
-    
-    /*Pendaftaran*/
-    .section_daftar {
-        display: flex;
-        height: 100%;
+    .section_3 p {
+        font-size: 16px;
+    }
+
+    .sub_program_container h2 {
+        font-size: 19px;
+    }
+
+    .program_container {
+        padding: 0 20px;
         flex-direction: column;
+    }
+
+    .sub_program_container {
         width: 100%;
-        background-size: cover;
-        background-attachment: fixed;
-        align-items: center;
-        background-image: url(asset/section_bg/6.webp);
-        background-color: #1E1E1E;
 
-        padding-top: 150px;
-        padding-bottom: 150px;
-        position: relative;
+        /* background-color: blue; */
     }
 
-    .section_daftar_sub {
-        display: flex;
-        max-width: 1400px;
-        align-items: center;
-        justify-content: center;
+    .spc_1 {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
-    .section_daftar_sub div {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        flex-direction: column;
-
-
-    }
-
-    .section_daftar_sub div h2 {
-        color: white;
-        font-size: 50px;
-        font-weight: 600;
-        margin-bottom: 30px;
-        letter-spacing: 2px;
-    }
-
-    .section_daftar_sub div p {
-        color: white;
-        margin-bottom: 60px;
-        font-size: 18px;
-        font-weight: 500px;
-        letter-spacing: 1px;
-        line-height: 30px;
-    }
-
-    .section_daftar_sub div a {
-        text-align: center;
-        background-color: #51A4F2;
-        color: white;
-        padding: 15px 25px;
-        font-weight: 600;
-        width: 150px;
-        transition: 300ms ease-in-out;
-        letter-spacing: 2px;
-        text-decoration: none;
-        border-radius: 15px;
-    }
-
-    .section_daftar_sub div a:hover {
-        background-color: #014796;
-    }
-
-    .section_daftar_sub img {
-        width: 300px;
+    .spc_2 {
+        margin-left: 0;
     }
 
     /*testimonial*/
@@ -1543,11 +1526,12 @@ footer div {
         margin-left: 25px;
         margin-right: 25px;
     }
-    
+
     /*pendaftaran*/
-    .section_daftar{
-         background-attachment: scroll;
+    .section_daftar {
+        background-attachment: scroll;
     }
+
     .section_daftar_sub div {
         width: 100%;
         align-items: center;
@@ -1566,7 +1550,7 @@ footer div {
         margin-left: 25px;
         margin-right: 25px;
     }
-    
+
 
     /*informasi*/
     .section_7 {
