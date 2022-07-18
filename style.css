@@ -161,10 +161,6 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     color: #135CFD;
 }
 
-.scroll-down nav {
-    transform: translate3d(0, -100%, 0);
-}
-
 .toggle-button {
     display: none;
     flex-direction: column;
@@ -1194,15 +1190,7 @@ footer div {
     .toggle-button {
         display: flex;
     }
-
-    .scroll-down nav {
-        transform: none;
-    }
-
-    .scroll-up nav {
-        filter: none;
-    }
-
+    
     nav ul {
         overflow: scroll;
         position: fixed;
