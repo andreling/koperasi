@@ -24,14 +24,25 @@
 
         </div>
         <div class="mask"></div>
-        <ul>
+        <ul class="main_menu">
             <button class="btn noSelect"><i class="fa fa-close "></i></button>
             <li class="links"><a href="#home">Beranda</a></li>
             <li class="links"><a href="#tentang_kami">Tentang Kami</a></li>
-            <li class="links product-link"><a href="#produk_kami">Produk Kami </a></li>
+            <li class="links product-link">
+                <div class="product_link_container">
+                    <a href="#produk_kami" class="product_trigger">Produk Kami</a>
+                    <i class="fa fa-caret-down product_dw" aria-hidden="true"></i>
+                </div>
+                <ul class="product_submenu">
+                    <li><a href="#program_simpanan" class="product-sub-links">Produk Simpanan</a></li>
+                    <li><a href="#program_pinjaman" class="product-sub-links">Produk Pinjaman</a></li>
+                </ul>
+            </li>
+
             <li class="links"><a href="#hubungi_kami">Hubungi Kami</a></li>
             <li class="links special-links"><a class="special-link" href="https://forms.gle/Tc1tgXNXuRyrfwxG9"
-                    target="_blank" rel="noopener noreferrer">Daftar</a></li>
+                    target="_blank" rel="noopener noreferrer">Daftar</a>
+            </li>
         </ul>
         <a href="#" onclick="return false;" class="toggle-button noSelect">
             <span></span>
@@ -39,7 +50,7 @@
             <span></span>
         </a>
     </nav>
-
+    
     <!--slideshow-->
     <header class="intro" id="home">
         <div class="intro_slideshow">
@@ -208,13 +219,14 @@
 
     <!--program simpanan-->
     <div class="section_3">
-        <div class="section_3_sub">
+        <div class="section_3_sub" id="program_simpanan">
             <h2 class="reveal">Program <span style="color: #3d99f5;">Simpanan</span></h2>
         </div>
         <div class="table_container">
             <img src="asset/SVG/t1.svg" class="table_1" alt="">
         </div>
-        <div class="section_3_sub">
+
+        <div class="section_3_sub" id="program_pinjaman">
             <h2 class="reveal">Program <span style="color: #3d99f5;">Pinjaman</span></h2>
         </div>
         <!--program pinjaman-->
@@ -641,47 +653,86 @@ Karena bagi kami, kepuasan para anggota merupakan salah satu modal dasar untuk d
         //navbar
         const toggleButton = document.getElementsByClassName('toggle-button')[0]
         const navbarLinks = document.querySelector('nav ul')
-        const test = document.getElementsByClassName('mask')[0]
+        const mask_background = document.getElementsByClassName('mask')[0]
         const closebtn = document.getElementsByClassName('btn')[0]
+
+        //links
         const link_0 = document.getElementsByClassName('links')[0]
         const link_1 = document.getElementsByClassName('links')[1]
-        const link_2 = document.getElementsByClassName('links')[2]
+        const link_2 = document.getElementsByClassName('product_trigger')[0]
         const link_3 = document.getElementsByClassName('links')[3]
 
+        //sub-links trigger
+        const product_sub_link_trigger = document.getElementsByClassName('product_dw')[0]
+
+        //sub-links-menu
+        const product_sub_link = document.getElementsByClassName('product_submenu')[0]
+
+        //sub-links
+        //product
+        const sub_link_product_1 = document.getElementsByClassName('product-sub-links')[0]
+        const sub_link_product_2 = document.getElementsByClassName('product-sub-links')[1]
+
+        //show menu
         toggleButton.addEventListener('click', () => {
             navbarLinks.classList.toggle('active');
-            test.classList.toggle('active');
-
+            mask_background.classList.toggle('active');
         })
 
+        // product-sub-menu
+        product_sub_link_trigger.addEventListener('click', () => {
+            product_sub_link.classList.toggle('active');
+            product_sub_link_trigger.classList.toggle('active');
+        })
+
+        //hide menu
         closebtn.addEventListener('click', () => {
             navbarLinks.classList.remove('active');
-            test.classList.remove('active');
-
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
         })
 
         link_0.addEventListener('click', () => {
-            console.log("test");
             navbarLinks.classList.remove('active');
-            test.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
         })
 
         link_1.addEventListener('click', () => {
-            console.log("test");
             navbarLinks.classList.remove('active');
-            test.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
         })
 
         link_2.addEventListener('click', () => {
-            console.log("test");
             navbarLinks.classList.remove('active');
-            test.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
         })
 
         link_3.addEventListener('click', () => {
-            console.log("test");
             navbarLinks.classList.remove('active');
-            test.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
+        })
+
+        sub_link_product_1.addEventListener('click', () => {
+            navbarLinks.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
+        })
+
+        sub_link_product_2.addEventListener('click', () => {
+            navbarLinks.classList.remove('active');
+            mask_background.classList.remove('active');
+            product_sub_link.classList.remove('active');
+            product_sub_link_trigger.classList.remove('active');
         })
 
     </script>
