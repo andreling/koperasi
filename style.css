@@ -93,7 +93,6 @@ body {
 
 
 /*Navbar*/
-
 .logo_div {
     display: flex;
     align-items: center;
@@ -120,19 +119,23 @@ nav {
 
 nav ul li {
     padding: 35px 20px;
+
 }
 
 nav ul li a {
     padding: 35px 0px;
+
 }
 
-nav ul {
+.main_menu {
     z-index: 999;
     height: 100%;
     display: flex;
     align-items: center;
     list-style: none;
+
 }
+
 
 nav ul li a:not(.special-link) {
     transition: all 0.3s ease 0s;
@@ -150,6 +153,7 @@ nav ul li a:not(.special-link) {
     font-size: 15px;
     text-decoration: none;
     border-radius: 10px;
+
 }
 
 .special-link:hover {
@@ -157,12 +161,17 @@ nav ul li a:not(.special-link) {
     transition: ease-in-out 300ms;
 }
 
+
+
+
 nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     color: #135CFD;
 }
 
+
 .toggle-button {
     display: none;
+
     flex-direction: column;
     justify-content: space-between;
     height: 20px;
@@ -190,6 +199,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     transition: 0.3s;
 }
 
+
 .btn {
     background-color: white;
     border: none;
@@ -200,6 +210,20 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     visibility: hidden;
     align-self: flex-end;
 
+}
+
+.product_submenu {
+    display: none;
+    background-color: #f5f5f5;
+}
+
+
+.product_submenu.active {
+    display: block;
+}
+
+.product_dw {
+    display: none !important;
 }
 
 /*slideshow*/
@@ -550,6 +574,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     color: #333333;
     font-weight: 700;
     margin-bottom: 30px;
+    padding: 20px;
     letter-spacing: 2px;
 }
 
@@ -1184,14 +1209,31 @@ footer div {
     text-align: center;
 }
 
+@media (min-width: 1111px) {
+    .product-link:hover .product_submenu {
+        display: block;
+        position: absolute;
+        list-style: none;
+
+        margin-top: 35px;
+
+    }
+
+
+}
+
 @media (max-width: 1110px) {
 
     /*nav*/
     .toggle-button {
         display: flex;
     }
-    
-    nav ul {
+
+    .links {
+        width: 100%;
+    }
+
+    .main_menu {
         overflow: scroll;
         position: fixed;
         flex-direction: column;
@@ -1218,7 +1260,6 @@ footer div {
 
     }
 
-
     .special-links {
         margin-top: 30px;
     }
@@ -1227,8 +1268,6 @@ footer div {
         margin-top: 30px;
         padding: 13px 105px;
     }
-
-
 
     nav ul.active {
         right: 0%;
@@ -1243,6 +1282,31 @@ footer div {
 
     .btn {
         visibility: visible;
+    }
+
+    .product_link_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        width: 100%;
+        height: 0;
+    }
+
+    .product_dw {
+        display: block !important;
+        font-size: 15px;
+        padding: 2px 10px;
+        transition: 100ms ease-in-out;
+    }
+
+    .product_submenu.active li a {
+        font-size: 13px;
+        font-weight: 550;
+    }
+
+    .product_dw.active {
+        transform: rotate(-180deg);
     }
 }
 
