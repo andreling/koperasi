@@ -43,11 +43,15 @@ nav {
 }
 
 section {
-    padding-top: 120px;
+    padding-top: 160px;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+section:nth-child(3) {
+    padding-top: 50px;
 }
 
 .section_content {
@@ -158,7 +162,7 @@ footer div {
 
 @media (max-width: 920px) {
     section {
-        padding-top: 100px;
+        padding-top: 130px;
     }
 
     .section_content {
@@ -166,6 +170,6 @@ footer div {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 22px;
     }
 }
