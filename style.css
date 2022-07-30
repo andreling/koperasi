@@ -318,25 +318,6 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     justify-content: center;
 }
 
-/*section 1 - tentang kami*/
-.section_1_sub_1_wrap {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.section_1_sub_1 {
-    padding: 50px 200px 50px 200px;
-    color: white;
-    max-width: 1400px;
-}
-
-.section_1_sub_1 p {
-    text-align: justify;
-}
-
 /*section 1 - visi dan misi kami*/
 
 .section_1_2_head {
@@ -370,9 +351,8 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 
 
 .section_1_sub_2 h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
-    letter-spacing: 5px;
     margin-bottom: 30px;
 }
 
@@ -392,7 +372,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 }
 
 .visi_txt h2 {
-    color: #51A4F2;
+    color: #333333;
 }
 
 .visi_txt p {
@@ -411,6 +391,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 .visi_img img {
     object-fit: cover;
     width: 100%;
+    border-radius: 30px 0px 30px 0px;
     height: 100%;
 }
 
@@ -429,12 +410,13 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 0px 30px 0px 30px;
 }
 
 .misi_txt {
     width: 50%;
     text-align: left;
-    color: #51A4F2;
+    color: #333333;
     padding-left: 60px;
 }
 
@@ -442,6 +424,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     line-height: 30px;
     color: #333333;
     font-size: 16px;
+    margin-left: 23px;
     font-weight: 600;
     text-align: left;
 }
@@ -1403,7 +1386,7 @@ footer div {
 
     .section_1_sub_2 {
 
-        padding: 40px 0px 10px 0px;
+        padding: 60px 0px 60px 0px;
 
     }
 
@@ -1426,7 +1409,7 @@ footer div {
 
     .visi_txt h2 {
         text-align: left;
-        letter-spacing: 3px;
+        /* letter-spacing: 3px; */
         margin-left: 25px;
         font-size: 30px;
         font-weight: 600;
@@ -1439,6 +1422,8 @@ footer div {
 
     .visi_img {
         width: 100%;
+        height: 250px;
+        padding: 0 25px;
     }
 
     .misi {
@@ -1451,7 +1436,8 @@ footer div {
     .misi_img {
         margin-top: 50px;
         width: 100%;
-        height: 400px;
+        height: 250px;
+        padding: 0 25px;
     }
 
 
@@ -1464,14 +1450,13 @@ footer div {
 
     .misi_txt h2 {
         text-align: left;
-        letter-spacing: 3px;
         margin-left: 25px;
         font-size: 30px;
         font-weight: 600;
     }
 
     .misi_txt ul li {
-        margin-left: 40px;
+        margin-left: 44px;
         margin-right: 40px;
         font-size: 14px;
         text-align: left;
