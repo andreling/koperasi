@@ -352,7 +352,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 
 .section_1_sub_2 h2 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 30px;
 }
 
@@ -1412,7 +1412,7 @@ footer div {
         /* letter-spacing: 3px; */
         margin-left: 25px;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     .visi_txt p {
@@ -1452,7 +1452,7 @@ footer div {
         text-align: left;
         margin-left: 25px;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     .misi_txt ul li {
