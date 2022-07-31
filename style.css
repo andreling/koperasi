@@ -318,6 +318,25 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     justify-content: center;
 }
 
+/*section 1 - tentang kami*/
+.section_1_sub_1_wrap {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section_1_sub_1 {
+    padding: 50px 200px 50px 200px;
+    color: white;
+    max-width: 1400px;
+}
+
+.section_1_sub_1 p {
+    text-align: justify;
+}
+
 /*section 1 - visi dan misi kami*/
 
 .section_1_2_head {
