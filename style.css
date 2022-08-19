@@ -1170,6 +1170,9 @@ footer div {
 
 .sub-social-container {
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     background-color: #202020;
     border-radius: 10px;
