@@ -344,7 +344,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 }
 
 .paralex_1 {
-    background: url(asset/st1.jpg) no-repeat center;
+    background: url(asset/section_bg/1.webp) no-repeat center;
     background-size: cover;
     background-color: #1E1E1E;
     background-attachment: fixed;
@@ -1093,7 +1093,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
 }
 
 .paralex_4 {
-    background: url(asset/te3.jpg) no-repeat center;
+    background: url(asset/section_bg/2.webp) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     background-color: #1E1E1E;
