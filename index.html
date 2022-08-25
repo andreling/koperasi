@@ -667,7 +667,10 @@
                     slidesPerView: 1,
                     spacecBetween: 20,
                     loop: true,
-                    autoplay: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false
+                    },
                     grabCursor: true,
                     mousewheel: false,
                     centeredSlides: true,
@@ -702,7 +705,10 @@
             centeredSlides: true,
             preloadImages: false,
             grabCursor: true,
-            autoplay: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
             loop: true,
             pagination: {
                 el: ".swiper-pagination",
