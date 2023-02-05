@@ -36,11 +36,25 @@
                     <li><a href="#program_pinjaman" class="product-sub-links">Produk Pinjaman</a></li>
                 </ul>
             </li>
-
-            <li class="links"><a href="#hubungi_kami">Hubungi Kami</a></li>
-            <li class="links special-links"><a class="special-link" href="https://forms.gle/Tc1tgXNXuRyrfwxG9"
-                    target="_blank" rel="noopener noreferrer">Daftar</a>
+            <li class="links product-link">
+                <div class="product_link_container">
+                    <a href="#" class="product_trigger">Daftar</a>
+                    <i class="fa fa-caret-down product_dw" aria-hidden="true"></i>
+                </div>
+                <ul class="product_submenu">
+                    <li><a href="https://forms.gle/Tc1tgXNXuRyrfwxG9" class="product-sub-links">Anggota Baru</a></li>
+                    <li><a href="https://forms.gle/g79iMPHLKaaqSGQV8" class="product-sub-links">Pinjaman Baru</a></li>
+                    <li><a href="https://forms.gle/KMacVWgVG1W6Nf1fA" class="product-sub-links">Top Up Pinjaman</a></li>
+                </ul>
             </li>
+            <li class="links"><a href="#hubungi_kami">Hubungi Kami</a></li>
+
+            <!--link 2-->
+        
+            <!---->
+            <!-- <li class="links special-links"><a class="special-link" href="https://forms.gle/Tc1tgXNXuRyrfwxG9"
+                    target="_blank" rel="noopener noreferrer">Daftar</a>
+            </li> -->
         </ul>
         <a href="#" onclick="return false;" class="toggle-button noSelect">
             <span></span>
@@ -756,18 +770,22 @@
         const link_0 = document.getElementsByClassName('links')[0]
         const link_1 = document.getElementsByClassName('links')[1]
         const link_2 = document.getElementsByClassName('product_trigger')[0]
-        const link_3 = document.getElementsByClassName('links')[3]
+        const link_3 = document.getElementsByClassName('links')[4]
 
         //sub-links trigger
         const product_sub_link_trigger = document.getElementsByClassName('product_dw')[0]
+        const product_sub_link_trigger_2 = document.getElementsByClassName('product_dw')[1]
 
         //sub-links-menu
         const product_sub_link = document.getElementsByClassName('product_submenu')[0]
+        const product_sub_link_2 = document.getElementsByClassName('product_submenu')[1]
 
         //sub-links
         //product
         const sub_link_product_1 = document.getElementsByClassName('product-sub-links')[0]
         const sub_link_product_2 = document.getElementsByClassName('product-sub-links')[1]
+
+    
 
         //show menu
         toggleButton.addEventListener('click', () => {
@@ -781,19 +799,29 @@
             product_sub_link_trigger.classList.toggle('active');
         })
 
+        product_sub_link_trigger_2.addEventListener('click', () => {
+            product_sub_link_2.classList.toggle('active');
+            product_sub_link_trigger_2.classList.toggle('active');
+        })
+
         //hide menu
         closebtn.addEventListener('click', () => {
             navbarLinks.classList.remove('active');
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
+     
         link_0.addEventListener('click', () => {
             navbarLinks.classList.remove('active');
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
         link_1.addEventListener('click', () => {
@@ -801,6 +829,8 @@
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
         link_2.addEventListener('click', () => {
@@ -808,6 +838,8 @@
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
         link_3.addEventListener('click', () => {
@@ -815,6 +847,8 @@
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
         sub_link_product_1.addEventListener('click', () => {
@@ -822,6 +856,8 @@
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
         sub_link_product_2.addEventListener('click', () => {
@@ -829,6 +865,8 @@
             mask_background.classList.remove('active');
             product_sub_link.classList.remove('active');
             product_sub_link_trigger.classList.remove('active');
+            product_sub_link_2.classList.remove('active');
+            product_sub_link_trigger_2.classList.remove('active');
         })
 
     </script>
