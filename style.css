@@ -100,8 +100,6 @@ body {
 /*================================================*/
 
 
-
-
 /*Navbar*/
 .logo_div {
     display: flex;
@@ -124,6 +122,7 @@ nav {
     height: 90px;
     align-items: center;
     margin: auto;
+    border-bottom: 1px solid rgb(213, 213, 213);
 }
 
 nav ul li {
@@ -225,8 +224,6 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     display: none;
     background-color: #f5f5f5;
 }
-
-
 
 .product_dw {
     display: none !important;
@@ -670,97 +667,160 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     letter-spacing: 2px;
 }
 
-.program_simpanan_container {
-    max-width: 1400px;
-}
 
 
-.table_simpanan_container {
-    background-color: white;
-    height: 550px;
-    padding: 40px;
-    margin: 0 30px;
-    margin-bottom: 100px;
-    width: 275px;
-    border-radius: 30px;
-    box-shadow: 28px 28px 41px -5px rgba(0, 0, 0, 0.1);
-
-}
-
-.table_simpanan_p {
-    margin-left: 0px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #135CFD;
-    margin-top: 7px;
-}
-
-
-
-
+/*Program Simpanan*/
 .program_simpanan_container {
     max-width: 1400px;
     display: flex;
-    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.table_simpanan_container {
+    height: 450px;
+    padding: 30px;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
+    margin-bottom: 100px;
+    width: 290px;
+    border-radius: 30px;
+    box-shadow: 28px 28px 41px -5px rgba(0, 0, 0, 0.1);
 
-.table_simpanan_p_angka {
-    margin-left: 0px;
-    font-size: 30px;
-    font-weight: 700;
-    color: #135CFD;
-    margin-top: 7px;
-}
-
+} 
 
 .table_simpanan_h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333333;
-}
-
-.table_simpanan_sub {
     margin-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
 }
 
-.table_simpanan_container_sub_header {
-    margin-top: 40px;
+
+.table_simpanan_container p{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+/*disni*/
+
+.product_mask {
+    width: 100%;
+    background-color: #081b2e;
+    opacity: 0.7;
+    position: absolute;
+    height: 100%;
+    border-radius: 30px;
+    transition: all 300ms ease-in-out;
 }
 
+.product_mask:hover {
+    opacity: 0.5;
+}
+
+.program_simpanan_card {
+    height: 450px;
+    width: 290px;
+    position: relative;
+    /* width: 370px;
+    height: 523px; */
+    background-color: #f0f0f0;
+    background-size: cover;
+    margin: 0 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: background-color 0.3s ease;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.program_simpanan_card_title {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    z-index: 998;
+    margin-bottom: 50px;
+}
+
+.program_simpanan_hover-text {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #135CFD;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+    justify-content: center;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.program_simpanan_hover-text >ul {
+    width: 100%;
+}
+
+.program_simpanan_card:hover .program_simpanan_hover-text {
+    opacity: 0.8;
+}
+
+.program_simpanan_card:hover .program_simpanan_card_title {
+    opacity: 0;
+}
+
+.program_simpanan_card:hover {
+    background-color: #c0c0c0;
+}
+
+.program_simpanan_card li {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.program_simpanan_card p {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tsc_1{
+    background-image: url("asset/simpanan_1.jpg");
+}
+
+.tsc_2{
+    background-image: url("asset/simpanan_2.jpg");
+}
+
+.tsc_3{
+    background-image: url("asset/simpanan_3.jpg");
+}
+
+
+
+/*Program Pinjaman*/
 .program_container {
     display: flex;
     max-width: 1400px;
     padding: 0 200px 50px 200px;
     height: 100%;
     justify-content: space-around;
-}
-
-.daftar_p {
-    line-height: 30px;
-    font-size: 23px;
-    color: #333333;
-    font-weight: 500;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.sub_program_container {
-    text-align: center;
-    width: 320px;
-    height: 473px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-
-.spc_1 {
-    margin-right: 20px;
-}
-
-.spc_2 {
-    margin-left: 20px;
+    margin-bottom: 100px;
 }
 
 .product_mask {
@@ -777,21 +837,88 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     opacity: 0.5;
 }
 
-.sub_program_container img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+.program_pinjaman_card {
+    position: relative;
+    width: 370px;
+    height: 523px;
+    background-color: #f0f0f0;
+    background-size: cover;
+
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: background-color 0.3s ease;
+
+    background-size: cover;
+    background-position: center;
 }
 
-.sub_program_container h2 {
-    color: white;
+.program_pinjaman_card_title {
+    margin: 0;
     font-size: 20px;
+    text-align: center;
+    color: #fff;
     font-weight: 600;
-    position: absolute;
+    z-index: 998;
     margin-bottom: 50px;
 }
 
+.spc_1 {
+    background-image: url("asset/pinjaman_1.webp");
+    margin-right: 20px;
+}
+
+.spc_2 {
+    background-image: url("asset/pinjaman_2.webp");
+    margin-left: 20px;
+}
+
+.program_pinjaman_hover-text {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0a0b16; */
+    background-color: #135CFD;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+    justify-content: center;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.program_pinjaman_hover-text >ul {
+    width: 100%;
+}
+
+.program_pinjaman_card:hover .program_pinjaman_hover-text {
+    opacity: 0.9;
+}
+
+.program_pinjaman_card:hover .program_pinjaman_card_title {
+    opacity: 0;
+}
+
+.program_pinjaman_card:hover {
+    background-color: #c0c0c0;
+}
+
+.program_pinjaman_card li {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.program_pinjaman_card p {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
 /*Pendaftaran*/
 .section_daftar {
     display: flex;
@@ -816,7 +943,7 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     justify-content: center;
 }
 
-.section_daftar_sub div {
+.section_daftar_sub_wrap {
     display: flex;
     width: 100%;
     align-items: center;
@@ -842,13 +969,24 @@ nav ul li a:hover:not(.special-link):not(.fa-sort-desc) {
     line-height: 30px;
 }
 
+.section_daftar_button_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
 .section_daftar_sub div a {
     text-align: center;
     background-color: #135CFD;
     color: white;
     padding: 15px 25px;
     font-weight: 600;
-    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
     transition: 300ms ease-in-out;
     letter-spacing: 2px;
     text-decoration: none;
@@ -1637,8 +1775,6 @@ footer div {
         margin-bottom: 10px;
     }
 
-
-
     .section_2_sub {
         padding: 30px 0px 0px 0px;
         width: 100%;
@@ -1691,8 +1827,6 @@ footer div {
         text-align: center;
     }
 
-
-
     .table_1 {
         margin-bottom: 50px;
     }
@@ -1702,25 +1836,54 @@ footer div {
         padding-bottom: 75px;
     }
 
+    .table_simpanan_container {
+        height: 345px;
+        padding: 30px;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+
+
+    .program_simpanan_container {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .table_simpanan_h3 {
+        margin:0px;
+        margin-bottom: 20px;
+    }
+
     .program_container {
         padding: 0 20px;
         flex-direction: column;
     }
 
-    .sub_program_container {
+    .program_container {
         width: 100%;
-        height: 270px;
     }
 
-    .sub_program_container h2 {
-        font-size: 17px;
+    .program_pinjaman_card {
+        width: 100%;
+        height: 400px;
     }
 
-    .daftar_p {
-        font-size: 16px;
-        padding: 20px 50px;
-
+    .program_simpanan_card {
+        margin: 0;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 30px;
     }
+
+
+
 
     .spc_1 {
         margin-right: 0;
@@ -1835,9 +1998,22 @@ footer div {
 
     .section_daftar_sub div p {
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         margin-left: 25px;
         margin-right: 25px;
+    }
+
+    .section_daftar_button_container {
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        width: 100%;
+      }
+
+      .section_daftar_sub div a {
+        margin-bottom: 20px;
+        height: 60px;
+        font-size: 15px;
     }
 
 
@@ -1849,73 +2025,6 @@ footer div {
     .section_7_sub h2 {
         font-size: 23px;
     }
-
-
-
-
-    .program_simpanan_container {
-        width: 100%;
-    }
-
-    .table_simpanan_p {
-        font-size: 20px;
-    }
-
-
-    .table_simpanan_container {
-        height: 300px;
-        padding: 30px 30px 30px 60px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-
-
-    .program_simpanan_container {
-        max-width: 1400px;
-
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .table_simpanan_p_angka {
-        margin-left: 0px;
-        font-size: 24px;
-        font-weight: 700;
-        color: #135CFD;
-        margin-top: 7px;
-    }
-
-
-    .table_simpanan_h3 {
-        font-size: 13px;
-        font-weight: 600;
-        color: #333333;
-    }
-
-    .table_simpanan_sub {
-        margin-top: 20px;
-    }
-
-    .table_simpanan_container_sub_header {
-        margin-top: 10px;
-        display: flex;
-        justify-content: left;
-    }
-
-    .table_simpanan_container_sub_header div {
-        text-align: left;
-    }
-
-    .table_simpanan_container_sub_section2 {
-        margin-left: 80px;
-    }
-
 
 }
 
@@ -1954,7 +2063,4 @@ footer div {
     }
 
 }
-
-
-
 
